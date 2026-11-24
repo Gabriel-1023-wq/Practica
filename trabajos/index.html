@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la Navidad en Michoacán, las tradiciones de Tlalpujahua y sus esferas artesanales.">
+    <title>Navidad en Michoacán | Práctica 6 CRAP</title>
+    <link rel="stylesheet" href="Complemento.css">
+</head>
+<body>
+    <!-- PRÁCTICA 6: Técnicas CRAP aplicadas: PROXIMIDAD y CONTRASTE. -->
+    <header class="encabezado-principal">
+        <div class="contenedor encabezado-contenido">
+            <!-- PROXIMIDAD: se agrupan los textos introductorios relacionados. -->
+            <div class="presentacion">
+                <p class="etiqueta-superior">Tradición · Artesanía · Cultura</p>
+                <h1>Navidad <span>en Michoacán</span></h1>
+                <p class="subtitulo">Descubre la magia de Tlalpujahua, el pueblo de la eterna Navidad.</p>
+            </div>
+            <nav class="navegacion" aria-label="Navegación principal">
+                <a href="#tlalpujahua">Conoce Tlalpujahua</a>
+                <a href="#productos">Productos navideños <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-principal">
+        <!-- SECCIÓN 1: INFORMACIÓN DE TLALPUJAHUA -->
+        <section class="seccion seccion-historia" id="tlalpujahua" aria-labelledby="titulo-tlalpujahua">
+            <!-- PROXIMIDAD: encabezado e introducción forman un bloque coherente. -->
+            <div class="cabecera-seccion">
+                <p class="numero-seccion"><span aria-hidden="true"></span> SECCIÓN 01 · CONOCE EL LUGAR</p>
+                <h2 id="titulo-tlalpujahua">Tlalpujahua: un pueblo lleno de Navidad</h2>
+                <p class="introduccion">Tlalpujahua es un Pueblo Mágico de Michoacán conocido por sus calles empedradas, sus talleres artesanales y sus tradicionales esferas navideñas de vidrio soplado.</p>
+            </div>
+            <!-- PROXIMIDAD: cada tarjeta reúne exclusivamente su tema y descripción. -->
+            <div class="tarjetas" aria-label="Aspectos de Tlalpujahua">
+                <article class="tarjeta-informativa">
+                    <div class="tarjeta-titulo"><span class="icono-tarjeta" aria-hidden="true">📍</span><h3>Ubicación</h3></div>
+                    <p>Se encuentra en la zona oriental de Michoacán, cerca del límite con el Estado de México. Sus paisajes montañosos y su arquitectura tradicional lo convierten en un destino muy especial.</p>
+                </article>
+                <article class="tarjeta-informativa">
+                    <div class="tarjeta-titulo"><span class="icono-tarjeta" aria-hidden="true">🍲</span><h3>Gastronomía</h3></div>
+                    <p>Entre sus platillos típicos destacan la barbacoa de hoyo, la cabeza de res al horno y la sopa de hongos. Son parte de los sabores que los visitantes pueden conocer en la región.</p>
+                </article>
+                <article class="tarjeta-informativa">
+                    <div class="tarjeta-titulo"><span class="icono-tarjeta" aria-hidden="true">🎨</span><h3>Actividad económica</h3></div>
+                    <p>Una actividad importante es la fabricación y venta de esferas navideñas y otras artesanías. También destacan el turismo, el comercio, la alfarería y los trabajos en cantera.</p>
+                </article>
+                <article class="tarjeta-informativa">
+                    <div class="tarjeta-titulo"><span class="icono-tarjeta" aria-hidden="true">🎄</span><h3>Tradiciones y atractivos</h3></div>
+                    <p>La Feria de la Esfera reúne decoraciones y productos elaborados por artesanos. Los visitantes también pueden conocer talleres, iglesias y lugares históricos como la antigua Mina Dos Estrellas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: PRODUCTOS Y TIENDAS EN LÍNEA -->
+        <section class="seccion seccion-productos" id="productos" aria-labelledby="titulo-productos">
+            <div class="cabecera-seccion">
+                <p class="numero-seccion"><span aria-hidden="true"></span> SECCIÓN 02 · ARTESANÍAS Y COMPRAS</p>
+                <h2 id="titulo-productos">Productos navideños de Tlalpujahua</h2>
+                <p class="introduccion">Los artesanos elaboran esferas de vidrio soplado, adornos pintados a mano y figuras decorativas. Hay diseños tradicionales, colores brillantes y piezas especiales para decorar árboles y hogares.</p>
+            </div>
+
+            <!-- PROXIMIDAD: cada tienda tiene su propio bloque, sin mezclar descripciones ni enlaces. -->
+            <div class="opciones-compra">
+                <article class="tienda tienda-texto">
+                    <div class="contenido-tienda">
+                        <p class="etiqueta-tienda">OPCIÓN 01 · ENLACE DE TEXTO</p>
+                        <h3>Esferas Tlalpujahua</h3>
+                        <p>Explora diferentes modelos de esferas y decoraciones navideñas en su catálogo en línea.</p>
+                    </div>
+                    <!-- CONTRASTE: enlace tipo botón de color rojo oscuro sobre fondo claro. -->
+                    <a class="boton-compra" href="https://esferastlalpujahua.com/shop/" target="_blank" rel="noopener noreferrer">Visitar tienda en línea <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="tienda tienda-imagen">
+                    <div class="contenido-tienda">
+                        <p class="etiqueta-tienda">OPCIÓN 02 · ENLACE CON IMAGEN</p>
+                        <h3>El Taller de Santa Claus</h3>
+                        <p>Conoce sus esferas artesanales. Haz clic en la imagen circular para abrir el catálogo.</p>
+                    </div>
+                    <!-- Segundo enlace: la imagen SVG es local y conserva su forma circular. -->
+                    <a class="enlace-imagen" href="https://tallerdesantaclaus.com/categoria-producto/esferas-navidenas/" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de esferas de El Taller de Santa Claus en una pestaña nueva">
+                        <img src="esfera-navidena.svg" alt="Esfera navideña roja con estrellas doradas">
+                        <span>Ver catálogo de esferas <span aria-hidden="true">↗</span></span>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-principal">
+        <div class="contenedor pie-contenido">
+            <p>© 2026 Navidad en Michoacán</p>
+            <p>Desarrollado por: ChatGPT</p>
+        </div>
+    </footer>
+</body>
+</html>

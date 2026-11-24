@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Esfera navideña roja con motivos dorados">
+<defs><radialGradient id="bg"><stop stop-color="#285c4b"/><stop offset="1" stop-color="#10372e"/></radialGradient><radialGradient id="ornament" cx=".25" cy=".2" r=".85"><stop stop-color="#ff9f92"/><stop offset=".38" stop-color="#d73642"/><stop offset="1" stop-color="#790b25"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<g fill="#eacb85" opacity=".8"><circle cx="56" cy="74" r="3"/><circle cx="312" cy="60" r="4"/><circle cx="355" cy="200" r="3"/><circle cx="66" cy="295" r="4"/><circle cx="288" cy="342" r="3"/></g>
+<path d="M200 0V85" stroke="#f0d796" stroke-width="5"/><rect x="183" y="73" width="34" height="29" rx="6" fill="#e6b45e"/><path d="M183 83h34 M190 75v23 M201 75v23 M211 75v23" stroke="#fff0b1" stroke-width="3"/>
+<ellipse cx="205" cy="313" rx="112" ry="19" fill="#071e18" opacity=".55" filter="url(#shadow)"/>
+<circle cx="200" cy="209" r="115" fill="url(#ornament)" stroke="#ebbd6b" stroke-width="4"/>
+<path d="M116 195Q200 148 283 195M113 236Q200 190 287 236" fill="none" stroke="#f2cf81" stroke-width="8" opacity=".9"/>
+<g fill="#ffe3a0"><path d="m200 113 8 25 26 0-21 15 8 25-21-15-21 15 8-25-21-15h26z"/><path d="m153 255 5 14h15l-12 9 5 14-13-9-12 9 5-14-12-9h15z"/><path d="m247 253 5 14h15l-12 9 5 14-13-9-12 9 5-14-12-9h15z"/></g>
+<ellipse cx="151" cy="152" rx="23" ry="45" fill="#fff" opacity=".17" transform="rotate(32 151 152)"/>
+</svg>

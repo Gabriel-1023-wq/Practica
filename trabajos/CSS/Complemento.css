@@ -1,0 +1,185 @@
+/*
+    PRÁCTICA 6 · Diseño CRAP aplicado a la práctica 5
+    TÉCNICAS ELEGIDAS:
+    1) PROXIMIDAD: agrupación de contenido relacionado con separaciones y espacios.
+    2) CONTRASTE: diferencia clara de colores, tamaños y énfasis en títulos y enlaces.
+*/
+
+:root {
+    --verde-oscuro: #11372e;
+    --verde: #185442;
+    --rojo: #8e2337;
+    --rojo-hover: #6c1728;
+    --oro: #e1b665;
+    --crema: #fcf8f0;
+    --papel: #ffffff;
+    --texto: #253b34;
+    --texto-secundario: #516057;
+    --linea: #e9e0d3;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+.contenedor { width: min(1100px, 91%); margin-inline: auto; }
+a:focus-visible { outline: 3px solid var(--oro); outline-offset: 4px; }
+
+/* CONTRASTE: fondo oscuro + tipografía blanca y dorada en el encabezado. */
+.encabezado-principal {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 88% 0%, rgba(225,182,101,.15) 0 110px, transparent 112px),
+        radial-gradient(circle at 8% 100%, rgba(225,182,101,.11) 0 150px, transparent 152px),
+        linear-gradient(118deg, #102f28 10%, #185443 100%);
+    color: #fff;
+    border-bottom: 6px solid var(--oro);
+}
+.encabezado-contenido { padding-block: 78px 64px; }
+
+/* PROXIMIDAD: el título, etiqueta y descripción forman una sola unidad. */
+.presentacion { max-width: 790px; }
+.etiqueta-superior {
+    display: inline-block;
+    margin: 0 0 16px;
+    color: #f5cf84;
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+h1, h2 { font-family: Georgia, 'Times New Roman', serif; }
+h1 {
+    margin: 0 0 15px;
+    font-size: clamp(2.65rem, 6vw, 5rem);
+    line-height: 1.07;
+    letter-spacing: -.035em;
+}
+h1 span { display: block; color: #f1c976; }
+.subtitulo { max-width: 580px; margin: 0; color: #e7f0ea; font-size: clamp(1.06rem, 2.2vw, 1.25rem); }
+
+/* PROXIMIDAD: menú claramente separado del párrafo introductorio. */
+.navegacion { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.navegacion a {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 46px; padding: 10px 19px;
+    border: 2px solid rgba(255,255,255,.7); border-radius: 9px;
+    color: white; text-decoration: none; font-weight: 700;
+    transition: background-color .15s, color .15s;
+}
+/* CONTRASTE: enlace principal visible como acción preferente. */
+.navegacion a:last-child { background: var(--oro); border-color: var(--oro); color: #183a30; }
+.navegacion a:hover { background: #fff; border-color: #fff; color: var(--verde-oscuro); }
+
+.contenido-principal { padding-block: 55px 75px; }
+.seccion { margin-bottom: 48px; scroll-margin-top: 24px; }
+.seccion:last-child { margin-bottom: 0; }
+
+/* PROXIMIDAD: mantener etiqueta, título y párrafo próximos entre sí. */
+.cabecera-seccion { max-width: 875px; margin-bottom: 29px; }
+.numero-seccion {
+    display: flex; align-items: center; gap: 10px;
+    margin: 0 0 10px; color: var(--rojo);
+    font-size: .76rem; font-weight: 800; letter-spacing: .13em;
+}
+.numero-seccion span { display: inline-block; width: 23px; height: 3px; background: var(--rojo); }
+.seccion h2 {
+    max-width: 790px; margin: 0 0 12px;
+    color: var(--verde-oscuro);
+    font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+    line-height: 1.15;
+}
+.introduccion { max-width: 790px; margin: 0; color: var(--texto-secundario); font-size: 1.05rem; }
+
+/* PROXIMIDAD: tarjetas independientes con títulos pegados a sus descripciones,
+   pero separadas unas de otras por un espacio uniforme de 18px. */
+.tarjetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.tarjeta-informativa {
+    padding: 25px 27px;
+    background: var(--papel);
+    border: 1px solid var(--linea);
+    border-top: 4px solid var(--oro);
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(23,52,40,.055);
+}
+.tarjeta-titulo { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.icono-tarjeta {
+    display: grid; flex: none; place-items: center; width: 43px; height: 43px;
+    background: #f8ebd4; border-radius: 10px; font-size: 1.25rem;
+}
+.tarjeta-informativa h3 { margin: 0; color: var(--rojo); font-size: 1.15rem; line-height: 1.35; }
+.tarjeta-informativa p { margin: 0; font-size: .96rem; }
+
+/* PROXIMIDAD: un bloque por tienda, con su descripción y su propio acceso. */
+.opciones-compra { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.tienda {
+    min-width: 0;
+    display: flex; flex-direction: column; align-items: flex-start;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid var(--linea);
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(23,52,40,.055);
+}
+.tienda-texto { border-top: 5px solid var(--rojo); }
+.tienda-imagen { border-top: 5px solid var(--verde); }
+.contenido-tienda { width: 100%; margin-bottom: 27px; }
+.etiqueta-tienda {
+    margin: 0 0 12px; color: var(--rojo);
+    font-size: .75rem; font-weight: 800; letter-spacing: .09em;
+}
+.tienda-imagen .etiqueta-tienda { color: var(--verde); }
+.tienda h3 { margin: 0 0 9px; color: var(--verde-oscuro); font-size: 1.4rem; line-height: 1.25; }
+.tienda p:not(.etiqueta-tienda) { margin: 0; color: var(--texto-secundario); }
+
+/* CONTRASTE: botón oscuro destacado sobre fondo blanco. */
+.boton-compra {
+    display: inline-flex; align-items: center; gap: 13px;
+    min-height: 47px; margin-top: auto; padding: 11px 18px;
+    background: var(--rojo); border-radius: 8px;
+    color: #fff; font-weight: 800; text-decoration: none;
+    transition: background-color .15s, transform .15s;
+}
+.boton-compra:hover { background: var(--rojo-hover); transform: translateY(-2px); }
+
+/* CONTRASTE: la imagen circular funciona como enlace y destaca por su borde dorado. */
+.enlace-imagen {
+    display: flex; flex-direction: column; align-items: center; gap: 9px;
+    align-self: center; margin-top: auto;
+    color: var(--verde-oscuro); font-weight: 800; text-decoration: none; text-align: center;
+}
+.enlace-imagen img {
+    display: block; width: 174px; height: 174px; object-fit: cover;
+    border-radius: 50%; border: 6px solid var(--oro);
+    background: var(--verde-oscuro);
+    box-shadow: 0 7px 20px rgba(23,52,40,.17);
+    transition: transform .18s, box-shadow .18s;
+}
+.enlace-imagen:hover img, .enlace-imagen:focus-visible img { transform: scale(1.045); box-shadow: 0 9px 26px rgba(23,52,40,.28); }
+.enlace-imagen:hover span { text-decoration: underline; text-underline-offset: 4px; }
+
+/* CONTRASTE: pie de página oscuro, texto claro y divisor dorado. */
+.pie-principal { background: var(--verde-oscuro); color: #fff; border-top: 5px solid var(--oro); }
+.pie-contenido { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 25px; padding-block: 28px; }
+.pie-contenido p { margin: 0; }
+
+@media (max-width: 700px) {
+    .encabezado-contenido { padding-block: 56px 44px; }
+    .contenido-principal { padding-block: 37px 50px; }
+    .seccion { margin-bottom: 38px; }
+    .tarjetas, .opciones-compra { grid-template-columns: 1fr; }
+    .tarjeta-informativa, .tienda { padding: 23px; }
+    .navegacion a { flex: 1 1 auto; }
+    .pie-contenido { flex-direction: column; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .boton-compra, .enlace-imagen img { transition: none; }
+}
